@@ -1,54 +1,36 @@
 # Introduction
-This mono respository is a template used when when auditing live projects. 
 
-### Repository Structure
+This mono repository is a Solves the Devcon 2024 Immunefi CTF
+
+## Repository Structure
+
 ```sh
 ├── .github
 ├── .vscode
 ├── contracts
-│   ├── TemplateContractOne
+│   ├── {CTF-Challenge}
 │   │   ├── src
-│   │   ├── lib
+│   │   ├── dependencies
+│   │   ├── docs
 │   │   ├── test 
 │   │   |    ├── interfaces
 │   │   |    └── POC.t.sol
-│   │   └── foundry.toml
-│   └── TemplateContractTwo
-│       ├── src
-│       ├── lib
-│       ├── test 
-│       │    ├── interfaces
-│       |    └── POC.t.sol
-│       └── foundry.toml
-├── doc
-│   └── AuditReport.md
+│   │   ├── foundry.toml
+│   │   ├── dependencies
+│   │   └── README.md
+│   └── ...
 ├── .gitignore 
-├── LICENCE
+├── LICENSE
 └── README.md
 ```
 
-### Setup
+## Setup
 
 ```sh
-$ git clone https://github.com/emilesean/audit_template.git
-$ cd audit_template/contracts/TemplateContractOne
-$ forge soldeer install
-$ forge build 
-$ forge test
-```
-
-### Usage
-
-```sh
-$ cast interface <ADDRESS> > ./contracts/SampleContractOne/test/interfaces/interface..sol
-$ cast etherscan-source <ADDRESS>> --dir ./contracts
-$ cd contracts/SampleContractThree
-$ cp ../SampleContractOne/foundry.toml .
-$ cp -r ../SampleContractOne/interfaces ./test
-```
-
-### Run Tests
-```sh
-$ cd contracts/SampleContractThree
-$ forge test --contract ./test/{contract_name}.t.sol -vvv
+git clone https://github.com/emilesean/Devcon-2024-ImmunefiCTF.git
+cd Devcon-2024-ImmunefiCTF
+cd contracts/{CTF-Challenge}
+forge soldeer install
+forge build 
+forge test
 ```
